@@ -15,7 +15,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 // Mount routes
 app.get('/', function (req, res) {
-    res.send('<h1>Hello World!</h1>');
+    res.redirect('/home');
 });
 
 app.get('/home', function(req, res) {

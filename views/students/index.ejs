@@ -9,17 +9,7 @@
     <h1>Students:</h1>
     <ul>
         <% students.forEach(function(s) { %>
-            <li>
-                ID: 
-                <%= s.id %>
-                -
-                <%= s.firstName %> 
-                <%= s.lastName %>
-                :
-                <a href="/students/<%= s.id %>">
-                    Click for Details for Student <%= s.id %>
-                </a>
-            </li>
+            <%- include('studentLink', {s: s}) %>
         <% }); %>
     </ul>
 </body>
